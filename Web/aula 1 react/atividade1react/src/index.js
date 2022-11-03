@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Car/Update';
-//import App from './creatCar/Creat';
+
+import App from './Home';
+
+//import App from './Login/Login'
+
+//import App from './Car/Creat';
+//import App from './Car/Update';
+//import App from './Car/List';
+
+
 //import App from './creatSaller/App';
 //import App from './creatSale/App';
 import reportWebVitals from './reportWebVitals';

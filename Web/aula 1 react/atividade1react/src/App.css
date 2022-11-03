@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +36,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.titulo{
+  margin-bottom: 30px;
+}
+
+table.table-veiculos{
+  width: 90%;
+}
+
+.navbar .container-fluid{
+  margin-left: 100px;
 }
