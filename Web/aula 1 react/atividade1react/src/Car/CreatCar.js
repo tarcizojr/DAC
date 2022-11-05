@@ -3,11 +3,9 @@ import "../App.css"
 
 import CardCar from "../Car/screens/Cards/cardCar";
 
-import NavBar from "../Components/NavBar";
-
 import 'bootswatch/dist/darkly/bootstrap.css';
 
-export default class CrearCar extends React.Component{
+export default class CreatCar extends React.Component{
     state ={
         id: "",
         marca: "",
@@ -15,18 +13,26 @@ export default class CrearCar extends React.Component{
     }
 
     mostrar = () =>{
-        alert(`Carro do id:"${this.state.id} "foi atualizado \n nova marca:${this.state.marca} \n novo modelo: ${this.state.modelo} `)
+        alert(`Carro Criado \n marca:${this.state.marca} \n  modelo: ${this.state.modelo} `)
     }
 
     render(){
         return(
             <div>
-                <NavBar></NavBar>
+               
                 <div className="App-header">                
                 
                 <h1 className="titulo">Salvar Carro</h1>
                
-                <CardCar label1="Marca" label2="Modelo"></CardCar>
+                <CardCar label="Marca">
+                    <input type="text" className="form-control" id="floatingInput-marca" placeholder="marca"  onChange={(e) =>{this.setState({marca: e.target.value})}}></input>
+                </CardCar>
+
+                <CardCar label="Modelo">
+                    <input type="text" className="form-control" id="floatingInput-modelo" placeholder="modelo" 
+
+                    onChange={(e) =>{this.setState({modelo: e.target.value})}}></input>
+                </CardCar>
 
                 {/* <div className="form-floating mb-3">
                     <input type="text" className="form-control" id="floatingInput-marca" placeholder="marca"></input>

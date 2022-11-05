@@ -14,10 +14,16 @@ function NavBar(props){
           </button>
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
+
               <NavbarItem href="/" label="Home"></NavbarItem>
-              <NavbarItem href="/salvarcarro" label="Criar Carro"></NavbarItem>
-              
-            </ul>            
+              {/*=== Carro ===*/}
+              <NavbarItem href="/salvarcarro" label="Criar Carro"></NavbarItem> 
+              <NavbarItem href="/atualizarcarro" label="Atualizar Carro"></NavbarItem>   
+              <NavbarItem href="/listarcarros" label="Listar Carro"></NavbarItem>
+                    
+           
+            </ul>   
+                 
           </div>
         </div>
       </nav>
@@ -25,3 +31,4 @@ function NavBar(props){
 }
 
 export default NavBar;
+
