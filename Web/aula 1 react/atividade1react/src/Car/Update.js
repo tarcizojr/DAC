@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
-import CardCar from "../Car/screens/Cards/cardCar";
+
+import CardCar from "../screens/Cards/cardCar";
 import 'bootswatch/dist/darkly/bootstrap.css';
 
 export default class PrimeiraTela extends React.Component{
