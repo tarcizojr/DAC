@@ -1,19 +1,35 @@
 import React from "react";
-import "../App.css"
+import "../App.css";
 
 import CardCar from "../screens/Cards/cardCar";
 
 import 'bootswatch/dist/darkly/bootstrap.css';
 
+import axios from 'axios';
+
 export default class CreatCar extends React.Component{
     state ={
         id: "",
-        marca: "",
-        modelo:""
+        marca: "aaa",
+        modelo:"aaa"
     }
 
     mostrar = () =>{
         alert(`Carro Criado \n marca:${this.state.marca} \n  modelo: ${this.state.modelo} `)
+    }
+
+    creat = async () =>{
+        await axios.post('http://localhost:8080/api/car',{
+            brand: this.state.marca,
+            model: this.state.modelo
+        }).then(response =>{
+            alert("Carro Criado")            
+            console.log(response);
+
+        }).catch(error =>{
+
+            console.log(error.response);
+        })
     }
 
     render(){
@@ -45,7 +61,7 @@ export default class CreatCar extends React.Component{
                 </div> */}
                 
 
-                <button type="button" className="btn btn-primary" onClick={this.mostrar}>Salvar</button>
+                <button type="button" className="btn btn-primary" onClick={this.creat}>Salvar</button>
 
 
                 </div>

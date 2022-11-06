@@ -20,6 +20,8 @@ function NavBar(props){
               <NavbarItem href="/salvarcarro" label="Criar Carro"></NavbarItem> 
               <NavbarItem href="/atualizarcarro" label="Atualizar Carro"></NavbarItem>   
               <NavbarItem href="/listarcarros" label="Listar Carro"></NavbarItem>
+              <NavbarItem href="/deletarcarro" label="Deletar Carro"></NavbarItem>
+
                     
            
             </ul>   

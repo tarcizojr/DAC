@@ -4,14 +4,33 @@ import "../App.css";
 import CardCar from "../screens/Cards/cardCar";
 import 'bootswatch/dist/darkly/bootstrap.css';
 
+import axios from 'axios';
+
 export default class PrimeiraTela extends React.Component{
     state = {
-        marca:"Fiat",
-        modelo:"Uno",
-        id:""
+        id:"",
+        marca:"",
+        modelo:""
+       
     }
     mostrar = () =>{
         alert(`Carro do id:"${this.state.id} "foi atualizado \n nova marca:${this.state.marca} \n novo modelo: ${this.state.modelo} `)
+    }
+
+    upDate = () =>{
+        axios.put(`http://localhost:8080/api/car/${this.state.id}`,
+        {
+            brand: this.state.marca,
+            model: this.state.modelo
+        }).then(response =>{
+
+            console.log(response);
+
+        }).catch(error =>{
+
+            console.log(error.response);
+        })
+        
     }
     render(){
         return(
@@ -52,7 +71,7 @@ export default class PrimeiraTela extends React.Component{
                 </div> */}
 
 
-                <button type="button" className="btn btn-primary" onClick={this.mostrar}>Salvar</button>
+                <button type="button" className="btn btn-primary" onClick={this.upDate}>Salvar</button>
 
 
             </div>
