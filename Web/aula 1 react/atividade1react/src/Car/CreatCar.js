@@ -7,11 +7,12 @@ import 'bootswatch/dist/darkly/bootstrap.css';
 
 import axios from 'axios';
 
+
 export default class CreatCar extends React.Component{
     state ={
         id: "",
-        marca: "aaa",
-        modelo:"aaa"
+        marca: "",
+        modelo:""
     }
 
     mostrar = () =>{
@@ -23,8 +24,9 @@ export default class CreatCar extends React.Component{
             brand: this.state.marca,
             model: this.state.modelo
         }).then(response =>{
-            alert("Carro Criado")            
+            alert("Carro Criado");           
             console.log(response);
+
 
         }).catch(error =>{
 
@@ -41,12 +43,11 @@ export default class CreatCar extends React.Component{
                 <h1 className="titulo">Salvar Carro</h1>
                
                 <CardCar label="Marca">
-                    <input type="text" className="form-control" id="floatingInput-marca" placeholder="marca"  onChange={(e) =>{this.setState({marca: e.target.value})}}></input>
+                    <input type="text" className="form-control" id="floatingInput-marca" placeholder="Marca"  onChange={(e) =>{this.setState({marca: e.target.value})}}></input>
                 </CardCar>
 
                 <CardCar label="Modelo">
-                    <input type="text" className="form-control" id="floatingInput-modelo" placeholder="modelo" 
-
+                    <input type="text" className="form-control" id="floatingInput-modelo" placeholder="Modelo"
                     onChange={(e) =>{this.setState({modelo: e.target.value})}}></input>
                 </CardCar>
 

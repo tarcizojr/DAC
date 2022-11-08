@@ -1,13 +1,14 @@
 import React from "react";
 import 'bootswatch/dist/darkly/bootstrap.css';
-
+import "../App.css"
 export default props => {
     const rows = props.dados.map(dados =>{
         return(
             <tr key={dados.id}>
                 <td>{dados.id}</td>
-                <td>{dados.brand}</td>
-                <td>{dados.model}</td>
+                <td>{dados.nome}</td>
+                <td>{dados.cpf}</td>
+                <td>{dados.sexoEnum}</td>
                 <td id="buton-acoes">
                     <button type="button" title="Editar"
                     className="btn btn-primary"
@@ -25,8 +26,9 @@ export default props => {
                     <thead>
                         <tr>                        
                         <th scope="col">Id</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Modelo</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Sexo</th>
                         <th scope="col">Açao</th>
                         </tr>
                     </thead>

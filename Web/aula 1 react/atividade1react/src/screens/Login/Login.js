@@ -19,6 +19,10 @@ export default class Login extends React.Component{
         console.log("Senha:", this.state.senha);
     }
 
+    entrar = () =>{
+        this.props.history.push('../Home.js');
+    }
+
     render(){
         return(
             <div className="App-header">
@@ -43,14 +47,13 @@ export default class Login extends React.Component{
                     </div>
 
                     <div>
-                        <button type="button" className="btn btn-success" onClick={this.login}>Entrar</button>
+                        <button type="button" className="btn btn-success" onClick={this.entrar}>Entrar</button>
+
                         <button type="button" className="btn btn-info" >Cadastrar</button>
 
                     </div>
 
-                </div>
-
-            
+                </div>            
 
 
             </div>

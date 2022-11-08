@@ -56,6 +56,21 @@ table.table-veiculos{
 }
 
 .filtro button{
+  margin-top: 30px;
   margin-left: 20px;
-  max-height: 60px;
+  max-height: 40px;
+}
+
+#buton-acoes{
+  display: flex;
+  padding: 20px;
+
+}
+
+#buton-acoes button{
+  margin-left: 10px;
+}
+
+.listar{
+  width: 80%;
 }

@@ -23,7 +23,7 @@ export default class PrimeiraTela extends React.Component{
             brand: this.state.marca,
             model: this.state.modelo
         }).then(response =>{
-
+            alert("Carro Atualizado")
             console.log(response);
 
         }).catch(error =>{
@@ -38,17 +38,17 @@ export default class PrimeiraTela extends React.Component{
                 <h1>Atualizar Caros</h1>
 
                 <CardCar label="ID">
-                    <input type="text" className="form-control" id="floatingInput-id" placeholder="id" 
+                    <input type="text" className="form-control" id="floatingInput-id" placeholder="Id" 
                     value={this.state.id} onChange={(e) =>{this.setState({id: e.target.value})}}></input>
                 </CardCar>
 
                 <CardCar label="Marca">
-                    <input type="text" className="form-control" id="floatingInput-marca" placeholder="marca" 
+                    <input type="text" className="form-control" id="floatingInput-marca" placeholder="Marca" 
                     value={this.state.marca} onChange={(e) =>{this.setState({marca: e.target.value})}}></input>
                 </CardCar>
 
                 <CardCar label="Modelo">
-                    <input type="text" className="form-control" id="floatingInput-modelo" placeholder="modelo" 
+                    <input type="text" className="form-control" id="floatingInput-modelo" placeholder="Modelo" 
                     value={this.state.modelo} onChange={(e) =>{this.setState({modelo: e.target.value})}}></input>
                 </CardCar>
 
@@ -71,7 +71,7 @@ export default class PrimeiraTela extends React.Component{
                 </div> */}
 
 
-                <button type="button" className="btn btn-primary" onClick={this.upDate}>Salvar</button>
+                <button type="button" className="btn btn-primary" onClick={this.upDate}>Atualizar</button>
 
 
             </div>

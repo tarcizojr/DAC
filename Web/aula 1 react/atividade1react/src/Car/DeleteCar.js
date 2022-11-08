@@ -16,7 +16,7 @@ export default class Delete extends React.Component{
         await axios.delete(`http://localhost:8080/api/car/${this.state.id}`,{
            
         }).then(response =>{
-
+            alert("Carro Deletado")
             console.log(response);
 
         }).catch(error =>{
@@ -31,15 +31,15 @@ export default class Delete extends React.Component{
                
                 <div className="App-header">                
                 
-                <h1 className="titulo">Salvar Carro</h1>
+                <h1 className="titulo">Deletar Carro</h1>
                
                 <CardCar label="ID">
-                    <input type="text" className="form-control" id="floatingInput-id" placeholder="id" 
+                    <input type="text" className="form-control" id="floatingInput-id" placeholder="Id" 
                     value={this.state.id} onChange={(e) =>{this.setState({id: e.target.value})}}></input>
                 </CardCar>
                               
 
-                <button type="button" className="btn btn-primary" onClick={this.delete}>Salvar</button>
+                <button type="button" className="btn btn-primary" onClick={this.delete}>Deletar</button>
 
 
                 </div>

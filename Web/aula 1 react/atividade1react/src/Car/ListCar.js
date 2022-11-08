@@ -11,11 +11,11 @@ import UserTable from "../Components/UserTable";
 
 export default class PrimeiraTela extends React.Component{
     state = {
-        "id": '',
-		"brand": '',
-		"model": '',
-		"sales": '',
-        "dados": []
+        id: '',
+		brand: '',
+		model: '',
+		sales: '',
+        dados: []
 
     }
     delete = (carId) =>{
@@ -28,7 +28,7 @@ export default class PrimeiraTela extends React.Component{
     } 
 
     edit = (carId) => {
-        this.props.history.push('/atualizarcarro');
+        this.props.history.push(`/atualizarcarro/${carId}`);
     }
 
     find = () => {
@@ -62,6 +62,7 @@ export default class PrimeiraTela extends React.Component{
 
             const dados = response.data;
             this.setState({dados});
+            
             console.log(dados);
 
         }).catch(error =>{
@@ -75,17 +76,17 @@ export default class PrimeiraTela extends React.Component{
             <div className="App-header">
                 <div className="filtro">
                     <CardCar label="ID">
-                        <input type="text" className="form-control" id="floatingInput-id" placeholder="id" 
+                        <input type="text" className="form-control" id="floatingInput-id" placeholder="Id" 
                         value={this.state.id} onChange={(e) =>{this.setState({id: e.target.value})}}></input>
                     </CardCar>
 
                     <CardCar label="Marca">
-                        <input type="text" className="form-control" id="floatingInput-marca" placeholder="marca" 
+                        <input type="text" className="form-control" id="floatingInput-marca" placeholder="Marca" 
                         value={this.state.marca} onChange={(e) =>{this.setState({marca: e.target.value})}}></input>
                     </CardCar>
 
                     <CardCar label="Modelo">
-                        <input type="text" className="form-control" id="floatingInput-modelo" placeholder="modelo" 
+                        <input type="text" className="form-control" id="floatingInput-modelo" placeholder="Modelo" 
                         value={this.state.modelo} onChange={(e) =>{this.setState({modelo: e.target.value})}}></input>
                     </CardCar>
                     
@@ -93,9 +94,9 @@ export default class PrimeiraTela extends React.Component{
                 
                 </div>
 
-                <h1 className="titulo">Listar Caros</h1>
+                <h1 className="titulo">Listar Carros</h1>
 
-                <div>
+                <div  className="listar">
                     <UserTable dados={this.state.dados} 
                     delete = {this.delete}
                     edit = {this.edit}/>

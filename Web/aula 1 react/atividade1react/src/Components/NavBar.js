@@ -17,13 +17,24 @@ function NavBar(props){
 
               <NavbarItem href="/" label="Home"></NavbarItem>
               {/*=== Carro ===*/}
+
               <NavbarItem href="/salvarcarro" label="Criar Carro"></NavbarItem> 
               <NavbarItem href="/atualizarcarro" label="Atualizar Carro"></NavbarItem>   
               <NavbarItem href="/listarcarros" label="Listar Carro"></NavbarItem>
               <NavbarItem href="/deletarcarro" label="Deletar Carro"></NavbarItem>
 
-                    
-           
+              {/*=== Vendedor ===*/}
+              <NavbarItem href="/salvarvendedor" label="Criar Vendedor"></NavbarItem>
+              <NavbarItem href="/deletarvendedor" label="Deletar Vendedor"></NavbarItem>
+              <NavbarItem href="/atualizarvendedor" label="Atualizar Vendedor"></NavbarItem>
+              <NavbarItem href="/listarvendedor" label="Listar Vendedor"></NavbarItem>
+
+              {/*=== Venda ===*/}
+              
+              <NavbarItem href="/salvarvenda" label="Criar Venda"></NavbarItem>
+              <NavbarItem href="/atualizarvenda" label="Atualizar Venda"></NavbarItem>
+              <NavbarItem href="/deletarvenda" label="Deletar Venda"></NavbarItem>
+              <NavbarItem href="/listarvenda" label="Listar Venda"></NavbarItem>
             </ul>   
                  
           </div>
